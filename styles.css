@@ -1,0 +1,42 @@
+.size {
+  font-size: 12px;
+}
+
+table {
+  border-width: 1px;
+  white-space: nowrap;
+  width: 1180px;
+  margin:auto;
+}
+
+.table-bordered > tbody > tr > td,
+.table-bordered > thead > tr > td,
+.table-bordered {
+    border-left: 0;
+    border-right: 0;
+}
+
+td {
+  width:1.7%;
+  position:relative;
+}
+td:after{
+  content:'';
+  display:block;
+  margin-top:100%;
+}
+td .square {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+.txt-light {
+  color: #EEEEEE;
+}
+
+.bg-light-pink {
+  background-color: #fffcff;
+}

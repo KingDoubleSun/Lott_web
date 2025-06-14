@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lottery recorder</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./data/powerball_data.js" type="text/javascript" defer></script>
+    <script src="./data/satlotto_data.js" type="text/javascript" defer></script>
+    <script src="record_form.js" type="text/javascript" defer></script>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <nav class="nav nav-pills flex-column flex-sm-row" id="page-nav">
+        <a
+          class="btn text-sm-center nav-link active"
+          aria-current="page"
+          onclick="change_size(20, this, 'pagechange')"
+          >星期四</a
+        >
+        <a
+          class="btn text-sm-center nav-link"
+          onclick="change_size(20, this, 'pagechange', 'satlotto')"
+          >星期六</a
+        >
+      </nav>
+      <br />
+      <nav class="nav nav-pills flex-column flex-sm-row" id="nav">
+        <a
+          class="btn flex-sm-fill text-sm-center nav-link active"
+          aria-current="page"
+          onclick="change_size(20, this, 'sizechange')"
+          >近20期</a
+        >
+        <a
+          class="btn flex-sm-fill text-sm-center nav-link"
+          onclick="change_size(50, this, 'sizechange')"
+          >近50期</a
+        >
+        <a
+          class="btn flex-sm-fill text-sm-center nav-link"
+          onclick="change_size(100, this, 'sizechange')"
+          >近100期</a
+        >
+      </nav>
+
+      <table
+        class="table-bordered size text-center bg-light-pink"
+        style="border-color: white"
+      >
+        <tbody id="table">
+          <tr>
+            <th class="col-xs-3">日期</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row mt-5 mb-5">
+        <button
+          type="button"
+          onclick="add_templete(3)"
+          class="btn btn-primary fs-5"
+        >
+          添加新的自选号
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
