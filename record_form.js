@@ -52,7 +52,7 @@ function get_templete_row(custom_no, game_type = "powerball") {
       a.setAttribute("toggled", 1);
     }
   };
-  append_numbers = (target, number, color = "warning", empty = false) => {
+  append_numbers = (target, number, color = "danger", empty = false) => {
     for (let i = 1; i <= number; i++) {
       td = document.createElement("td");
       if (i == edge) td.setAttribute("style", "border-right: 1px solid grey");
